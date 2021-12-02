@@ -2,5 +2,10 @@ import re
 
 
 def find_icao_in_observation(observation):
-    x = re.match("(METAR|SPECI)?( COR)? ?([A-Z]{4})", observation)
-    return x.group(3)
+    if re.match("(METAR|SPECI|LWIS)?( COR)? ?([A-Z]{4} )", observation):
+        x = re.match("(METAR|SPECI|LWIS)?( COR)? ?([A-Z]{4} )", observation)
+        icao = x.group(3).strip()
+    else:
+        icao = "None"
+
+    return icao
