@@ -1,11 +1,6 @@
-import re
+from find_icao import FindIcao
 
+observation_file = open("", "r")
+observation = observation_file.read()
 
-def find_icao_in_observation(observation):
-    if re.match("(METAR|SPECI|LWIS)?( COR)? ?([A-Z]{4} )", observation):
-        x = re.match("(METAR|SPECI|LWIS)?( COR)? ?([A-Z]{4} )", observation)
-        icao = x.group(3).strip()
-    else:
-        icao = "None"
-
-    return icao
+icao = FindIcao(observation).find_icao_in_observation()
