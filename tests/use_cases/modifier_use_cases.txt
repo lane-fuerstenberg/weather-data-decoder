@@ -1,0 +1,9 @@
+1. Be able to call FindModifier.
+
+2. Be able to call find_modifier_in_observation.
+
+3. Be able to find the modifier of "METAR KBXK 121815Z AUTO 19003KT 10SM 25/02 A3014 RMK A01="
+
+4. Be able to find the modifier of "SPECI KBXK 121815Z AUTO 19003KT 10SM 25/02 A3014 RMK A01="
+
+5. Be able to find the modifier of "LWIS KBXK 121815Z AUTO 19003KT 10SM 25/02 A3014 RMK A01="
