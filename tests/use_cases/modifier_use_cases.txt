@@ -7,3 +7,5 @@
 4. Be able to find the modifier of "SPECI KBXK 121815Z AUTO 19003KT 10SM 25/02 A3014 RMK A01="
 
 5. Be able to find the modifier of "LWIS KBXK 121815Z AUTO 19003KT 10SM 25/02 A3014 RMK A01="
+
+6. Be able to find the modifier of "METAR KBXK 121815Z 19003KT 10SM 25/02 A3014 RMK A01="

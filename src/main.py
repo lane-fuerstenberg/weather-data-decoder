@@ -12,4 +12,11 @@ def find_icao_in_observation(observation):
 
 
 def find_modifier_in_observation(observation):
-    return "AUTO"
+    if " AUTO " in observation:
+        modifier = "AUTO"
+    elif " COR " in observation:
+        modifier = "COR"
+    else:
+        modifier = "None"
+
+    return modifier
