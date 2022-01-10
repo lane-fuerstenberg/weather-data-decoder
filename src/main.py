@@ -20,3 +20,10 @@ def find_modifier_in_observation(observation):
         modifier = "None"
 
     return modifier
+
+
+def find_wind_in_observation(observation):
+    x = re.match(
+        "(METAR|SPECI|LWIS)?( COR)? ?([A-Z]{4} )(\d+)Z (AUTO)? (.+)(KT|MPS)", observation)
+    wind_section = x.group(6) + x.group(7)
+    return wind_section
