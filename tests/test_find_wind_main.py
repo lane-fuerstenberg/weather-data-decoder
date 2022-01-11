@@ -62,3 +62,17 @@ def test_find_wind_speed_for_calm_wind():
         "METAR KTOA 121747Z 00000KT 10SM SKC 31/06 A3009=")
 
     assert main.wind_speed == "00"
+
+
+def test_find_wind_speed_when_over_99():
+    main.find_wind_in_observation(
+        "METAR KJSO 121815Z AUTO 330107MPS 10SM CLR 18/10 A3019 RMK AO2 T01910098=")
+
+    assert main.wind_speed == "107"
+
+
+def test_find_gust_speed_when_over_99():
+    main.find_wind_in_observation(
+        "METAR KJSO 121815Z AUTO 330107G119MPS 10SM CLR 18/10 A3019 RMK AO2 T01910098=")
+
+    assert main.gust_speed == "119"

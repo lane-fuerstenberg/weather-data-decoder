@@ -38,10 +38,12 @@ def find_wind_in_observation(observation):
     wind_section = x.group(6)
 
     wind_direction = wind_section[:3]
-    wind_speed = wind_section[3:5]
     wind_unit = x.group(7)
 
     if "G" in wind_section:
-        gust_speed = wind_section[6:8]
+        speeds = wind_section.split("G")
+        wind_speed = speeds[0][3:]
+        gust_speed = speeds[1]
     else:
+        wind_speed = wind_section[3:]
         gust_speed = "None"
